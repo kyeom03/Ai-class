@@ -1,2 +1,55 @@
-a
-a
+CNN (Convolutional Neural Network, 합성곱 신경망)
+주로 이미지, 영상 같은 공간적 데이터 처리에 사용
+
+핵심 아이디어
+이미지를 작은 필터(커널)로 훑으면서 특징(패턴)을 추출
+
+특징
+픽셀 간의 공간적 관계를 잘 잡음
+엣지, 색상, 질감 → 점점 더 복잡한 특징으로 발전
+파라미터 수가 상대적으로 적어서 효율적
+
+사용 예
+얼굴 인식
+자율주행 차량의 객체 탐지
+의료 영상 분석
+
+1) 기본 구조
+입력 → Convolution → Activation → Pooling → (반복) → Fully Connected → 출력
+
+2) Convolution (합성곱 연산)
+핵심은 필터(kernel)를 사용해서 입력 데이터를 스캔하는 것
+수식 (2D convolution) : Y(i,j)=∑∑X(i+m,j+n)⋅K(m,n)
+X: 입력 이미지
+K: 필터 (예: 3x3)
+Y: 출력 feature map
+이미지의 작은 영역과 필터를 곱해서 특정 패턴 존재 여부를 계산
+
+3) 중요한 개념들
+Stride
+필터가 이동하는 간격
+클수록 출력 크기 작아짐
+Padding
+가장자리에 0 추가
+출력 크기 유지 가능
+
+4) Activation 함수
+대표적으로 ReLU
+f(x)=max(0,x)
+→ 비선형성 추가
+
+5) Pooling
+목적
+크기 축소, 노이즈 제거, 계산량 감소
+
+종류
+Max Pooling: 최대값
+Average Pooling: 평균값
+
+6) CNN의 강점
+Parameter sharing → 파라미터 수 감소
+Translation invariance → 위치 변화에 강함
+
+7) 한계
+시간 정보 처리 못함
+순서 데이터에 약함
