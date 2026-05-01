@@ -16,7 +16,7 @@ CNN (Convolutional Neural Network, 합성곱 신경망)
 
 1) 기본 구조
 입력 → Convolution → Activation → Pooling → (반복) → Fully Connected → 출력
-<img src="https://github.com/kyeom03/Ai-class/issues/1#issue-4362988021"/>
+<img width="898" height="393" alt="Image" src="https://github.com/user-attachments/assets/fab1b784-e04f-47c0-b36f-4a46e8938288" />
 
 2) Convolution (합성곱 연산)
 핵심은 필터(kernel)를 사용해서 입력 데이터를 스캔하는 것
